@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Paleta de Colores: */
+
+
+
+ /* Nueva Paleta de Colores: Synthwave Dusk */
+:root {
+    --purpura-profundo: #1C122C; /* Base, Fondo del Sidebar */
+    --magenta-retro: #F569B6; /* Acento, CTA */
+    --azul-electrico: #4DFFFF; /* Texto Principal, Activo */
+    --naranja-atardecer: #FF9A4D; /* Secundario, Datos */
+    --gris-cosmico: #C4C4C4; /* Texto Suave/Secundario */
+}
