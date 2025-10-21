@@ -1,0 +1,111 @@
+/* Estilos Generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--purpura-profundo); /* Fondo principal oscuro */
+            color: var(--gris-cosmico);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Encabezado */
+        .header {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #0E0818; /* Ligeramente más oscuro para la cabecera */
+            box-shadow: 0 5px 15px rgba(245, 105, 182, 0.3); /* Sombra de neón magenta */
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: var(--azul-electrico); /* Título en neón azul */
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px var(--azul-electrico);
+        }
+
+        /* Contenedor Principal de la Galería */
+        .gallery-container {
+            width: 90%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding-bottom: 50px;
+        }
+
+        /* Estilo de la Tarjeta de Imagen */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(77, 255, 255, 0.2); /* Sutil brillo azul */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(245, 105, 182, 0.6); /* Brillo intenso en hover (magenta) */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px; /* Altura fija para uniformidad */
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s;
+        }
+
+        /* Overlay de Información (Estilo Neón) */
+        .image-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(28, 18, 44, 0.8); /* Púrpura Profundo semi-transparente */
+            color: var(--naranja-atardecer);
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease-out;
+        }
+
+        .gallery-item:hover .image-info {
+            transform: translateY(0); /* Muestra el overlay al pasar el ratón */
+        }
+
+        .image-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.1em;
+            color: var(--magenta-retro); /* Título de la imagen en Magenta */
+        }
+
+        .image-info p {
+            margin: 0;
+            font-size: 0.85em;
+        }
+
+        /* Botón de Acción (CTA) */
+        .cta-button {
+            background-color: var(--magenta-retro); /* Color CTA */
+            color: var(--purpura-profundo);
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 15px var(--magenta-retro); /* Neón Magenta */
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #FF7BBE; /* Magenta más claro al hover */
+            box-shadow: 0 0 25px var(--magenta-retro);
+        }
