@@ -20,60 +20,7 @@
             }
         }
 
-        .nav-link {
-            color: var(--gris-cosmico) !important;
-            border-left: 3px solid transparent;
-            margin-bottom: 5px;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: var(--azul-electrico) !important;
-            border-left-color: var(--magenta-retro); /* Resaltar con Magenta Retro */
-            background-color: rgba(245, 105, 182, 0.1); /* Sombra suave con Magenta */
-        }
 
-        /* Perfil de Usuario */
-        .user-profile {
-            text-align: center;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .user-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 3px solid var(--naranja-atardecer); /* Borde en Naranja */
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-        .user-profile h5 {
-            color: var(--azul-electrico); /* Nombre de usuario en color primario */
-        }
-
-        /* Botón CTA (Llamada a la Acción) */
-        .btn-neon {
-            background-color: var(--magenta-retro);
-            color: white; /* Texto blanco en el botón CTA */
-            font-weight: bold;
-            border: none;
-            box-shadow: 0 0 5px rgba(245, 105, 182, 0.5); /* Sombra más suave */
-            transition: all 0.3s;
-        }
-        .btn-neon:hover {
-            background-color: var(--naranja-atardecer);
-            box-shadow: 0 0 8px rgba(255, 154, 77, 0.7);
-        }
-
-        /* Tarjetas de Contenido */
-        .card-electro {
-            background-color: rgba(255, 255, 255, 0.05); /* Fondo oscuro semitransparente */
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: var(--gris-cosmico);
-            margin-bottom: 20px;
-        }
-        .card-electro .card-title {
-            color: var(--naranja-atardecer); /* Títulos de tarjeta en Naranja Atardecer */
-        }
     </style>
 <body>
 
@@ -83,139 +30,22 @@
 
     <div class="container-fluid">
         <div class="row">
-
-            <nav id="sidebar" class="col-lg-2 col-md-3 d-none d-lg-block sidebar">
-                <div class="user-profile">
-                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar" class="user-avatar">
-                    <h5 class="mt-2">**Neo Synth**</h5>
-                </div>
-
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">
-                            <i class="fas fa-chart-line"></i> Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-compact-disc"></i> Eventos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-ticket-alt"></i> Tickets
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-users"></i> Artistas
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-cog"></i> Ajustes
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="p-3 mt-4">
-                    <button class="btn btn-neon w-100">Cerrar Sesión</button>
-                </div>
+          <!-- sidebar -->
+           <nav id="sidebar" class="col-lg-2 col-md-3 d-none d-lg-block sidebar">
+                <app-sidebar></app-sidebar>
             </nav>
 
-            <main class="col-lg-10 col-md-9 ms-sm-auto px-md-4 py-4">
-                <h1 class="mb-4" style="color: var(--magenta-retro);">**Panel de Control - Synthwave**</h1>
-
-                <div class="row">
-                    <div class="col-md-6 col-xl-3">
-                        <div class="card card-electro text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Ventas Hoy</h5>
-                                <p class="card-text fs-2" style="color: var(--azul-electrico);">**1.2K**</p>
-                                <p class="card-text" style="color: var(--gris-cosmico);">Tickets Vendidos</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3">
-                        <div class="card card-electro text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Próximo Evento</h5>
-                                <p class="card-text fs-2" style="color: var(--naranja-atardecer);">**Retrowave**</p>
-                                <p class="card-text" style="color: var(--gris-cosmico);">12 Días Restantes</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3">
-                        <div class="card card-electro text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Ganancia Neta</h5>
-                                <p class="card-text fs-2" style="color: var(--magenta-retro);">**$45K**</p>
-                                <p class="card-text" style="color: var(--gris-cosmico);">Total Acumulado</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3">
-                        <div class="card card-electro text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Visitantes Web</h5>
-                                <p class="card-text fs-2" style="color: var(--azul-electrico);">**8.5K**</p>
-                                <p class="card-text" style="color: var(--gris-cosmico);">Últimas 24h</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mt-4">
-                    <div class="col-lg-8">
-                        <div class="card card-electro">
-                            <div class="card-body">
-                                <h5 class="card-title">Tendencia de Ventas (Placeholder)</h5>
-                                <div style="height: 300px; background-color: rgba(255, 255, 255, 0.05); border: 1px dashed var(--magenta-retro);">Gráfico Aquí</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card card-electro">
-                            <div class="card-body">
-                                <h5 class="card-title">Actividad Reciente</h5>
-                                <ul class="list-group list-group-flush" style="background: none;">
-                                    <li class="list-group-item" style="background: none; border-color: rgba(255, 255, 255, 0.1); color: var(--gris-cosmico);">Nuevo ticket de **VIP** vendido.</li>
-                                    <li class="list-group-item" style="background: none; border-color: rgba(255, 255, 255, 0.1); color: var(--gris-cosmico);">Comentario de fan en Facebook.</li>
-                                    <li class="list-group-item" style="background: none; border-color: rgba(255, 255, 255, 0.1); color: var(--gris-cosmico);">Artistas confirmados: **Kyoto Beats**.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Colocar el dashboard -->
+             <main class="col-lg-10 col-md-9 ms-sm-auto px-md-4 py-4">
+                <app-dashboard></app-dashboard>
             </main>
+
         </div>
     </div>
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas" style="background-color: var(--purpura-profundo);">
-        <div class="offcanvas-header border-bottom" style="border-color: rgba(255, 255, 255, 0.1) !important;">
-            <h5 class="offcanvas-title" style="color: var(--magenta-retro);">**Menú Synthwave**</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body">
-            <nav class="sidebar">
-                <div class="user-profile">
-                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar" class="user-avatar">
-                    <h5 class="mt-2">**Neo Synth**</h5>
-                </div>
-
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tickets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Artistas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Ajustes</a></li>
-                </ul>
-
-                <div class="p-3 mt-4">
-                    <button class="btn btn-neon w-100">Cerrar Sesión</button>
-                </div>
-            </nav>
-        </div>
+        <!-- sidebar movil -->
+      <app-sidebar-movil></app-sidebar-movil>
     </div>
 
 </body>

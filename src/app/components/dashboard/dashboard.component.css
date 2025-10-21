@@ -1,0 +1,10 @@
+/* Tarjetas de Contenido */
+.card-electro {
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo oscuro semitransparente */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--gris-cosmico);
+    margin-bottom: 20px;
+}
+.card-electro .card-title {
+    color: var(--naranja-atardecer); /* Títulos de tarjeta en Naranja Atardecer */
+}
