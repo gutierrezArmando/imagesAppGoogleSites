@@ -1,35 +1,7 @@
-.user-profile {
-            text-align: center;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
 
 
 
-        .user-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 3px solid var(--naranja-atardecer); /* Borde en Naranja */
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-.user-profile h5 {
-            color: var(--azul-electrico); /* Nombre de usuario en color primario */
-        }
 
-
-        .nav-link {
-            color: var(--gris-cosmico) !important;
-            border-left: 3px solid transparent;
-            margin-bottom: 5px;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: var(--azul-electrico) !important;
-            border-left-color: var(--magenta-retro); /* Resaltar con Magenta Retro */
-            background-color: rgba(245, 105, 182, 0.1); /* Sombra suave con Magenta */
-        }
 
         /* Botón CTA (Llamada a la Acción) */
         .btn-neon {
